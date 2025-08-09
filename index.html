@@ -30,6 +30,7 @@
             border-radius: 50%;
             border: 3px solid #f87171;
             animation: fadeIn 2s ease-in-out;
+            object-fit: cover;
         }
         section {
             padding: 40px 20px;
@@ -77,8 +78,9 @@
 <body>
 
     <header>
-        <img src="prof
-            mypic.jpg" alt="Karan Rai" class="profile-pic">
+        <!-- Replace 'profile.jpg' with your actual image file -->
+        <img src="profile.jpg" alt="Karan Rai" class="profile-pic" 
+             onerror="this.src='https://via.placeholder.com/180';">
         <h1>Karan Rai</h1>
         <h2>Software Developer</h2>
         <a href="mailto:ppkaran954@gmail.com" class="btn">Email Me</a>
