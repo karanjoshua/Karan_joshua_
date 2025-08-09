@@ -3,74 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KARANDEEP SINGH | Portfolio</title>
+  <title>Karan Portfolio</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
       background: #f5f5f5;
       color: #333;
+      overflow-x: hidden;
     }
+
+    /* Animated Shapes Background */
+    .shapes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+      background: rgba(0, 114, 255, 0.2);
+      border-radius: 50%;
+      animation: float 15s infinite ease-in-out;
+    }
+
+    .shape:nth-child(1) {
+      width: 120px; height: 120px;
+      left: 10%; top: 20%;
+      animation-delay: 0s;
+    }
+
+    .shape:nth-child(2) {
+      width: 200px; height: 200px;
+      left: 70%; top: 10%;
+      animation-delay: 5s;
+    }
+
+    .shape:nth-child(3) {
+      width: 150px; height: 150px;
+      left: 50%; top: 70%;
+      animation-delay: 2s;
+    }
+
+    .shape:nth-child(4) {
+      width: 100px; height: 100px;
+      left: 80%; top: 60%;
+      animation-delay: 7s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); }
+      50% { transform: translateY(-50px) translateX(20px); }
+    }
+
+    /* Header */
     header {
-      background: linear-gradient(135deg, #007bff, #00c6ff);
-      color: white;
+      background: linear-gradient(270deg, #00c6ff, #0072ff);
+      background-size: 400% 400%;
+      animation: gradientBG 8s ease infinite;
       text-align: center;
-      padding: 40px 20px;
+      padding: 50px 20px;
+      color: white;
     }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     header img {
       width: 150px;
       height: 150px;
-      border-radius: 50%;
       object-fit: cover;
+      border-radius: 50%;
       border: 4px solid white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      animation: fadeIn 1.5s ease;
     }
+
     header h1 {
-      margin: 15px 0 5px;
-      font-size: 2.2em;
+      margin-top: 15px;
+      font-size: 2rem;
+      animation: slideUp 1s ease;
     }
+
     header p {
-      font-size: 1.2em;
+      font-size: 1.1rem;
       opacity: 0.9;
+      animation: slideUp 1.2s ease;
     }
+
+    /* Sections */
     section {
-      max-width: 900px;
-      margin: auto;
-      padding: 30px 20px;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
     }
-    h2 {
-      color: #007bff;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
     }
-    .skills span {
-      display: inline-block;
-      background: #007bff;
+
+    section h2 {
+      color: #0072ff;
+      margin-bottom: 10px;
+    }
+
+    section p {
+      line-height: 1.6;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      background: #0072ff;
       color: white;
-      padding: 8px 15px;
-      margin: 5px;
+      padding: 8px 16px;
       border-radius: 20px;
-      font-size: 0.9em;
+      font-size: 0.9rem;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: skillFade 0.5s ease forwards;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-    .contact a {
-      display: inline-block;
-      margin: 10px 15px 0 0;
-      text-decoration: none;
+
+    .skill:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    @keyframes skillFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Contact */
+    .contact-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: #0072ff;
       color: white;
-      background: #007bff;
-      padding: 10px 18px;
-      border-radius: 5px;
-      transition: 0.3s;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
     }
-    .contact a:hover {
-      background: #0056b3;
+
+    .btn:hover {
+      background: #0056cc;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
 
+  <!-- Floating Background Shapes -->
+  <div class="shapes">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
   <header>
-    <img src="myphoto.jpg" alt="KARANDEEP SINGH">
+    <img src="profile.jpg" alt="Karan Deep Singh">
     <h1>KARANDEEP SINGH</h1>
     <p>Aspiring Web Developer & Gaming Enthusiast</p>
   </header>
@@ -83,22 +219,47 @@
   <section>
     <h2>Skills</h2>
     <div class="skills">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
+      <div class="skill" style="animation-delay: 0.1s;">HTML</div>
+      <div class="skill" style="animation-delay: 0.3s;">CSS</div>
+      <div class="skill" style="animation-delay: 0.5s;">JavaScript</div>
     </div>
   </section>
 
   <section>
-    <h2>Projects</h2>
-    <p>No projects yet — but something exciting is coming soon!</p>
+    <h2>Contact</h2>
+    <div class="contact-buttons">
+      <a href="mailto:ppkaran954@gmail.com" class="btn">Email Me</a>
+      <a href="https://www.instagram.com/karanrai091/profilecard/?igsh=MW42OHY2OGI5c25oaw==" target="_blank" class="btn">Instagram</a>
+    </div>
   </section>
 
-  <section class="contact">
-    <h2>Contact</h2>
-    <a href="mailto:ppkaran954@gmail.com">Email Me</a>
-    <a href="https://www.instagram.com/karanrai091" target="_blank">Instagram</a>
-  </section>
+  <script>
+    // Scroll animation
+    const sections = document.querySelectorAll("section");
+
+    const showOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          section.classList.add("show");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", showOnScroll);
+    window.addEventListener("load", () => {
+      showOnScroll();
+
+      // Skills animation
+      document.querySelectorAll(".skill").forEach(skill => {
+        setTimeout(() => {
+          skill.style.opacity = "1";
+          skill.style.transform = "translateY(0)";
+        }, parseFloat(skill.style.animationDelay) * 1000);
+      });
+    });
+  </script>
 
 </body>
 </html>
