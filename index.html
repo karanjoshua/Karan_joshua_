@@ -1,154 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Karandeep Singh — Portfolio</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karan Rai | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 30px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+        }
+        h2 {
+            font-size: 1.5rem;
+            color: #f87171;
+            margin-bottom: 20px;
+        }
+        img.profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid #f87171;
+            animation: fadeIn 2s ease-in-out;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .skills span {
+            display: inline-block;
+            margin: 8px;
+            padding: 10px 20px;
+            border: 1px solid #f87171;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .skills span:hover {
+            background-color: #f87171;
+            color: black;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #f87171;
+            color: black;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: white;
+            color: #f87171;
+        }
+        footer {
+            padding: 20px;
+            border-top: 1px solid #1e293b;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand">Karan<span class="dot">.</span></div>
-      <button class="nav-toggle" id="navToggle" aria-label="menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+    <header>
+        <img src="profile.png" alt="Karan Rai" class="profile-pic">
+        <h1>Karan Rai</h1>
+        <h2>Software Developer</h2>
+        <a href="mailto:ppkaran954@gmail.com" class="btn">Email Me</a>
+        <a href="https://www.instagram.com/karanrai091/profilecard/?igsh=MW42OHY2OGI5c25oaw==" class="btn" target="_blank">Instagram</a>
+    </header>
 
-  <!-- HERO -->
-  <header id="home" class="hero">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <p class="hello">Hello <span class="accent">.</span></p>
-        <h1 class="hero-title">I'm <span class="name">Karandeep</span><br><span class="role">Software Developer</span></h1>
-        <p class="hero-sub">Aspiring Web Developer & Gaming Enthusiast. I build clean, modern web experiences with HTML, CSS & JavaScript.</p>
-
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="#contact">Got a project?</a>
-          <a class="btn btn-outline" href="#" target="_blank">My resume</a>
-        </div>
-
-        <div class="skill-strip" aria-hidden="true">
-          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>React</span><span>Git</span><span>Node.js</span>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="portrait-wrap">
-          <!-- Replace src with your image path or URL -->
-          <img class="portrait" src="img/.jpg" alt="Karandeep Singh">
-          <div class="portrait-ring"></div>
-          <svg class="portrait-deco" viewBox="0 0 200 200" aria-hidden="true">
-            <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff6b6b"/><stop offset="1" stop-color="#ff9a6b"/></linearGradient></defs>
-            <circle cx="100" cy="100" r="80" fill="none" stroke="url(#g)" stroke-width="2" opacity="0.15"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ABOUT -->
-  <main>
-    <section id="about" class="card about-card">
-      <h2 class="section-title">About me</h2>
-      <p class="about-text">I started my software journey from curiosity and gaming. I love creating from scratch — building interfaces, small apps, and learning new tools every day. Currently focused on front-end development and modern JavaScript frameworks.</p>
-
-      <div class="stats">
-        <div class="stat">
-          <div class="num">120<span class="plus">+</span></div>
-          <div class="label">Completed Projects</div>
-        </div>
-        <div class="stat">
-          <div class="num">95<span class="percent">%</span></div>
-          <div class="label">Client Satisfaction</div>
-        </div>
-        <div class="stat">
-          <div class="num">3<span class="plus">+</span></div>
-          <div class="label">Years Experience</div>
-        </div>
-      </div>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Karan Rai. I enjoy creating websites and learning new technologies.
+        I’m passionate about design, development, and delivering high-quality digital experiences.</p>
     </section>
 
-    <!-- PROJECTS (placeholder) -->
-    <section id="projects" class="card projects-card">
-      <h2 class="section-title">Projects</h2>
-      <p class="muted">(Add your projects here — cards, screenshots or links.)</p>
-      <div class="projects-grid">
-        <div class="proj">Project One</div>
-        <div class="proj">Project Two</div>
-        <div class="proj">Project Three</div>
-      </div>
+    <section class="skills">
+        <h2>Skills</h2>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Node.js</span>
+        <span>React</span>
     </section>
 
-    <!-- SKILLS -->
-    <section class="card skills-card">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">
-          <div class="skill-name">HTML</div>
-          <div class="skill-bar"><div style="width:92%"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-name">CSS</div>
-          <div class="skill-bar"><div style="width:88%"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-name">JavaScript</div>
-          <div class="skill-bar"><div style="width:80%"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-name">React</div>
-          <div class="skill-bar"><div style="width:70%"></div></div>
-        </div>
-      </div>
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:ppkaran954@gmail.com" style="color:#f87171;">ppkaran954@gmail.com</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/karanrai091/profilecard/?igsh=MW42OHY2OGI5c25oaw==" style="color:#f87171;" target="_blank">@karanrai091</a></p>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="card contact-card">
-      <h2 class="section-title">Contact</h2>
-      <p class="about-text">Want to work together? Send me a message — I usually respond fast.</p>
+    <footer>
+        © Karan 2025
+    </footer>
 
-      <div class="contact-actions">
-        <a class="btn btn-primary" href="mailto:ppkaran954@gmail.com">Email Me</a>
-        <a class="btn btn-outline" href="https://www.instagram.com/karanrai091/profilecard/?igsh=MW42OHY2OGI5c25oaw==" target="_blank">Instagram</a>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <p>© Karan 2025</p>
-    </div>
-  </footer>
-
-  <!-- Small JS for nav toggle -->
-  <script>
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      navToggle.classList.toggle('open');
-    });
-
-    // Close mobile nav on link click
-    document.querySelectorAll('.nav-links a').forEach(a=>{
-      a.addEventListener('click', ()=> navLinks.classList.remove('open'));
-    });
-  </script>
 </body>
 </html>
